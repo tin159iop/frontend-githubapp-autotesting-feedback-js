@@ -88,7 +88,7 @@ export const AuthProvider = ({ children }) => {
 
   const login = async (email, password) => {
     try {
-      const response = await axios.post("/api/account/login", {
+      const response = await axios.post("http://localhost:5000/api/account/login", {
         email,
         password,
       });
@@ -118,7 +118,7 @@ export const AuthProvider = ({ children }) => {
 
   const register = async (email, password) => {
     try {
-      const response = await axios.post("/api/account/register", {
+      const response = await axios.post("http://localhost:5000/api/account/register", {
         email,
         password,
       });
@@ -149,7 +149,7 @@ export const AuthProvider = ({ children }) => {
           console.log(accessToken);
           setSession(accessToken);
 
-          const response = await axios.get("/api/account/me");
+          const response = await axios.get("http://localhost:5000/api/account/me");
           const { user } = response.data;
 
           dispatch({

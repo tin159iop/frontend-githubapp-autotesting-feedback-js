@@ -48,7 +48,7 @@ const DashboardView = () => {
     <Page title="Kiki: Dashboard">
       <Container maxWidth="xl">
         <Header />
-        <Grid container spacing={3}>
+        {/* <Grid container spacing={3}>
           <Grid item lg={3} sm={6} xs={12}>
             <Earnings />
           </Grid>
@@ -73,7 +73,7 @@ const DashboardView = () => {
           <Grid item lg={5} xl={4} xs={12}>
             <Analytics />
           </Grid>
-        </Grid>
+        </Grid> */}
       </Container>
     </Page>
   );

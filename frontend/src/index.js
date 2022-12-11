@@ -1,7 +1,7 @@
 import ReactDOM from "react-dom/client";
 import { SettingProvider } from "contexts/SettingContext";
 import App from "./App";
-import "__mocks__";
+// import "__mocks__";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

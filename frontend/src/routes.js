@@ -86,7 +86,7 @@ const routes = [
     routes: [
       {
         path: "/",
-        component: LandingView,
+        component: () => <Navigate to="/home" />,
       },
       {
         path: "/404",
@@ -106,14 +106,14 @@ const routes = [
         component: lazy(() => import("views/RegisterView")),
         guard: GuestGuard,
       },
-      {
-        path: "/login-unguarded",
-        component: lazy(() => import("views/LoginView")),
-      },
-      {
-        path: "/register-unguarded",
-        component: lazy(() => import("views/RegisterView")),
-      },
+      // {
+      //   path: "/login-unguarded",
+      //   component: lazy(() => import("views/LoginView")),
+      // },
+      // {
+      //   path: "/register-unguarded",
+      //   component: lazy(() => import("views/RegisterView")),
+      // },
       {
         path: "/theme",
         component: lazy(() => import("views/ThemeView")),
@@ -135,53 +135,53 @@ const routes = [
       },
     ],
   },
-  {
-    path: "/projects",
-    layout: DashboardLayout,
-    guard: AuthGuard,
-    routes: [
-      {
-        component: lazy(() => import("views/ProjectsView")),
-      },
-      {
-        path: "create",
-        component: lazy(() => import("views/ProjectCreateView")),
-      },
-      {
-        path: ":projectId",
-        component: lazy(() => import("views/ProjectView")),
-      },
-    ],
-  },
-  {
-    path: "/docs",
-    layout: DocsLayout,
-    routes: [
-      {
-        component: lazy(() => import("views/Docs/GettingStartedView")),
-      },
-      {
-        path: "auth",
-        component: lazy(() => import("views/Docs/AuthenticationView")),
-      },
-      {
-        path: "routing",
-        component: lazy(() => import("views/Docs/RoutingView")),
-      },
-      {
-        path: "api",
-        component: lazy(() => import("views/Docs/APIView")),
-      },
-      {
-        path: "theming",
-        component: lazy(() => import("views/Docs/ThemingView")),
-      },
-      {
-        path: "deploy",
-        component: lazy(() => import("views/Docs/DeploymentView")),
-      },
-    ],
-  },
+  // {
+  //   path: "/projects",
+  //   layout: DashboardLayout,
+  //   guard: AuthGuard,
+  //   routes: [
+  //     {
+  //       component: lazy(() => import("views/ProjectsView")),
+  //     },
+  //     {
+  //       path: "create",
+  //       component: lazy(() => import("views/ProjectCreateView")),
+  //     },
+  //     {
+  //       path: ":projectId",
+  //       component: lazy(() => import("views/ProjectView")),
+  //     },
+  //   ],
+  // },
+  // {
+  //   path: "/docs",
+  //   layout: DocsLayout,
+  //   routes: [
+  //     {
+  //       component: lazy(() => import("views/Docs/GettingStartedView")),
+  //     },
+  //     {
+  //       path: "auth",
+  //       component: lazy(() => import("views/Docs/AuthenticationView")),
+  //     },
+  //     {
+  //       path: "routing",
+  //       component: lazy(() => import("views/Docs/RoutingView")),
+  //     },
+  //     {
+  //       path: "api",
+  //       component: lazy(() => import("views/Docs/APIView")),
+  //     },
+  //     {
+  //       path: "theming",
+  //       component: lazy(() => import("views/Docs/ThemingView")),
+  //     },
+  //     {
+  //       path: "deploy",
+  //       component: lazy(() => import("views/Docs/DeploymentView")),
+  //     },
+  //   ],
+  // },
   {
     path: "*",
     component: () => <Navigate to="/404" />,
