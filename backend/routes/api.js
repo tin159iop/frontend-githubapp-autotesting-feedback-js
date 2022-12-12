@@ -6,12 +6,9 @@ let Users = require("../models/users.model");
 const JWT_SECRET = "autotesting-secret-key";
 const JWT_EXPIRES_IN = "5 days";
 
-
 router.route("/account/me").get((req, res) => {
   
-  // console.log(req.headers);
   const { authorization } = req.headers;
-  // console.log(authorization);
   if (!authorization) {
     res.status(401).json({ errors: ["Authorization token missing"] })
   }
