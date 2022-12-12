@@ -10,7 +10,7 @@ const JWTLogin = () => {
     <Formik
       initialValues={{
         email: "demo@kiki.cat",
-        password: "pasword123",
+        password: "password123",
       }}
       validationSchema={Yup.object().shape({
         email: Yup.string()
@@ -75,7 +75,7 @@ const JWTLogin = () => {
           <Box mt={2}>
             <Alert severity="info">
               <div>
-                Use <b>demo@kiki.cat</b> and password <b>pasword123</b>
+                Use <b>demo@kiki.cat</b> and password <b>password123</b>
               </div>
             </Alert>
           </Box>

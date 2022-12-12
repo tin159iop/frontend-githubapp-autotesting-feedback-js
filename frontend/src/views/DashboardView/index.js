@@ -1,15 +1,7 @@
-import { Card, Avatar, Container, Grid } from "@mui/material";
+import { Card, Avatar, Container } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import Page from "components/Page";
 import Header from "./Header";
-import LatestProjects from "./LatestProjects";
-import Projects from "./Projects";
-import Revenue from "./Revenue";
-import Analytics from "./Analytics";
-import Balance from "./Balance";
-import Progress from "./Progress";
-import Activities from "./Activities";
-import Earnings from "./Earnings";
 
 
 export const CardLight = styled(Card)(({ theme }) => ({
@@ -48,32 +40,9 @@ const DashboardView = () => {
     <Page title="Kiki: Dashboard">
       <Container maxWidth="xl">
         <Header />
-        {/* <Grid container spacing={3}>
-          <Grid item lg={3} sm={6} xs={12}>
-            <Earnings />
-          </Grid>
-          <Grid item lg={3} sm={6} xs={12}>
-            <Balance />
-          </Grid>
-          <Grid item lg={3} sm={6} xs={12}>
-            <Progress />
-          </Grid>
-          <Grid item lg={3} sm={6} xs={12}>
-            <Projects />
-          </Grid>
-          <Grid item lg={5} xs={12}>
-            <Activities />
-          </Grid>
-          <Grid item lg={7} xs={12}>
-            <Revenue />
-          </Grid>
-          <Grid item lg={7} xl={8} xs={12}>
-            <LatestProjects />
-          </Grid>
-          <Grid item lg={5} xl={4} xs={12}>
-            <Analytics />
-          </Grid>
-        </Grid> */}
+
+        {/* Add stuff to dashboard here */}
+
       </Container>
     </Page>
   );

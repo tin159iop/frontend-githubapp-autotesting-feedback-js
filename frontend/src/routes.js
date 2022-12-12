@@ -2,8 +2,6 @@ import { Suspense, Fragment, lazy } from "react";
 import { Route, Navigate } from "react-router-dom";
 import DashboardLayout from "layouts/DashboardLayout";
 import MainLayout from "layouts/MainLayout";
-import LandingView from "views/LandingView";
-import DocsLayout from "layouts/DocsLayout";
 import AuthGuard from "components/AuthGuard";
 import GuestGuard from "components/GuestGuard";
 import LoadingScreen from "components/LoadingScreen";
@@ -106,14 +104,6 @@ const routes = [
         component: lazy(() => import("views/RegisterView")),
         guard: GuestGuard,
       },
-      // {
-      //   path: "/login-unguarded",
-      //   component: lazy(() => import("views/LoginView")),
-      // },
-      // {
-      //   path: "/register-unguarded",
-      //   component: lazy(() => import("views/RegisterView")),
-      // },
       {
         path: "/theme",
         component: lazy(() => import("views/ThemeView")),
